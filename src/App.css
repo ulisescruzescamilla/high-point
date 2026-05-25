@@ -20,6 +20,20 @@
     width: auto;
   }
 
+  & .navbar-hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-text);
+    padding: 4px;
+    line-height: 0;
+
+    &:hover {
+      color: var(--color-dark);
+    }
+  }
+
   & .navbar-links {
     display: flex;
     gap: 32px;
@@ -42,32 +56,157 @@
   @media (max-width: 768px) {
     padding: 16px 24px;
     flex-wrap: wrap;
-    gap: 12px;
+    align-items: center;
+
+    & .navbar-hamburger {
+      display: flex;
+    }
 
     & .navbar-links {
-      flex-wrap: wrap;
-      gap: 12px 20px;
-      justify-content: flex-end;
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      gap: 0;
+      padding: 8px 0 16px;
+
+      & li {
+        width: 100%;
+        border-top: 1px solid #e5e4e7;
+      }
+
+      & a {
+        display: block;
+        padding: 14px 0;
+        font-size: 18px;
+      }
+    }
+
+    &.navbar--open .navbar-links {
+      display: flex;
     }
   }
 }
 
 /* ── Hero ────────────────────────────────────────────────── */
 .section-hero {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 2fr;
   min-height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  overflow: hidden;
+
+  & .hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+  }
 
   & .hero-col {
+    position: relative;
+    z-index: 1;
     min-height: 100%;
   }
 
+  & .hero-col--right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 48px;
+    gap: 200px;
+  }
+
   @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-    min-height: 60vh;
+    display: block;
+    min-height: unset;
+
+    & .hero-bg {
+      position: static;
+      width: 100%;
+      height: auto;
+      object-fit: unset;
+    }
+
+    & .hero-col--left {
+      display: none;
+    }
+
+    & .hero-col--right {
+      display: flex;
+      justify-content: center;
+      padding: 24px 0 32px;
+    }
+
+    & .hero-rooms {
+      display: none;
+    }
+  }
+}
+
+/* ── Hero Card ───────────────────────────────────────────── */
+.hero-card {
+  background: rgba(255, 255, 255, 0.75);
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 24px;
+  width: 76%;
+
+  & .hero-card__title {
+    font-family: var(--font-heading);
+    font-size: 48px;
+    font-weight: 400;
+    color: var(--color-text);
+    margin: 0;
+  }
+
+  & .hero-card__content {
+    font-family: var(--font-body);
+    font-size: 16px;
+    color: var(--color-text);
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    width: 75%;
+  }
+}
+
+/* ── Primary button ──────────────────────────────────────── */
+.btn-primary {
+  font-family: var(--font-body);
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
+  background: var(--color-dark);
+  border: none;
+  padding: 14px 36px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.88;
+  }
+}
+
+/* ── Hero Rooms ──────────────────────────────────────────── */
+.hero-rooms {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  width: 100%;
+
+  & .hero-rooms__cell img {
+    width: 100%;
+    height: 250px;
+    display: block;
   }
 }
 
