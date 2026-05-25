@@ -227,11 +227,9 @@
   }
 
   & .razones-title {
-    text-align: center;
-    position: relative;
-    z-index: 1;
-    max-width: 800px;
-    margin: 0 auto 48px;
+    text-align: left;
+    max-width: 70%;
+    margin-bottom: 48px;
   }
 
   & .razones-grid {
@@ -243,8 +241,20 @@
     align-items: center;
   }
 
-  & .razones-text {
+  & .razones-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  & .razones-item {
     line-height: 1.8;
+    margin: 0;
+
+    & strong {
+      color: #000;
+      font-weight: 700;
+    }
   }
 
   & .razones-img {
@@ -255,6 +265,23 @@
 
   @media (max-width: 768px) {
     padding: 48px 24px;
+    background: #29362F;
+
+    & .razones-title {
+      color: #fff;
+    }
+
+    & .green-rect {
+      display: none;
+    }
+
+    & .razones-item {
+      color: #fff;
+
+      & strong {
+        color: #fff;
+      }
+    }
 
     & .razones-grid {
       grid-template-columns: 1fr;
