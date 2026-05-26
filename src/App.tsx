@@ -6,6 +6,7 @@ import SectionBreak from './components/SectionBreak'
 import AmenidadesSection from './components/AmenidadesSection'
 import DepartamentosSection from './components/DepartamentosSection'
 import AcabadosSection from './components/AcabadosSection'
+import PlantasSection from './components/PlantasSection'
 import UbicacionSection from './components/UbicacionSection'
 import AboutSection from './components/AboutSection'
 import ContactoSection from './components/ContactoSection'
@@ -21,6 +22,7 @@ function App() {
       <AmenidadesSection />
       <DepartamentosSection />
       <AcabadosSection />
+      <PlantasSection />
       <UbicacionSection />
       <AboutSection />
       <ContactoSection />

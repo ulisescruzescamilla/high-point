@@ -1,44 +1,38 @@
 import { useState } from 'react'
+import Carousel from './Carousel'
 
-const acabadoImages = {
-  general: '/src/finishes/general.png',
-  cocina:  '/src/finishes/kitchen.png',
-  bano:    '/src/finishes/bathroom.png',
-} as const
-
-type Acabado = keyof typeof acabadoImages
-
-const acabadoTabs: { key: Acabado; label: string }[] = [
-  { key: 'general', label: 'Generales' },
-  { key: 'cocina',  label: 'Cocina' },
-  { key: 'bano',    label: 'Baño' },
+const acabadoTabs = [
+  { label: 'Generales', img: '/src/finishes/general.png' },
+  { label: 'Cocina',    img: '/src/finishes/kitchen.png' },
+  { label: 'Baño',      img: '/src/finishes/bathroom.png' },
 ]
 
+const acabadoImages = acabadoTabs.map(t => t.img)
+
 export default function AcabadosSection() {
-  const [active, setActive] = useState<Acabado>('general')
+  const [activeIndex, setActiveIndex] = useState(0)
 
   return (
     <section id="galeria" className="section-acabados">
       <h1 className="section-title">Acabados</h1>
       <div className="tabs">
-        {acabadoTabs.map(({ key, label }) => (
+        {acabadoTabs.map((tab, i) => (
           <button
-            key={key}
-            className={`tab-btn${active === key ? ' tab-btn--active' : ''}`}
-            onClick={() => setActive(key)}
+            key={tab.label}
+            className={`tab-btn${activeIndex === i ? ' tab-btn--active' : ''}`}
+            onClick={() => setActiveIndex(i)}
             type="button"
           >
-            {label}
+            {tab.label}
           </button>
         ))}
       </div>
-      <div className="acabado-preview">
-        <img
-          src={acabadoImages[active]}
-          alt={`Acabado ${active}`}
-          className="acabado-image"
-        />
-      </div>
+      <Carousel
+        images={acabadoImages}
+        altPrefix="Acabado"
+        index={activeIndex}
+        onIndexChange={setActiveIndex}
+      />
     </section>
   )
 }
