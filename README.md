@@ -41,6 +41,11 @@ npm run lint     # Ejecuta ESLint sobre todo el proyecto
 
 ### Comentarios
 
+## SEO
+- Sitio optimizado con descripciones SEO para las imágenes, sitemap.
+- Imágenes optimizadas para mayor carga en mobile y desktop.
+- Keywords descriptivas y context en index.html
+
 #### Posibles mejoras:
 - Agregar env vars para datos que podemos modificar al desplegar como datos de contacto, teléfono, email, url del sitio.
 - En la sección de plantas los recursos exportados del figma parece que el estilo background blanco no es visualmente adecuado a la agrupación del figma actual, se podría cambiar background o agrupación del figma para mejorar como visualizar en carrousel.

@@ -1,12 +1,15 @@
 .page {
   width: 100%;
   overflow-x: hidden;
+  padding-top: 65px;
 }
 
 /* ── Navbar ─────────────────────────────────────────────── */
 .navbar {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 100;
   background: #fff;
   display: flex;
@@ -54,6 +57,9 @@
   }
 
   @media (max-width: 768px) {
+    position: fixed;
+    left: 0;
+    right: 0;
     padding: 16px 24px;
     flex-wrap: wrap;
     align-items: center;
