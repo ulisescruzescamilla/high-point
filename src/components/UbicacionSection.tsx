@@ -20,10 +20,12 @@ export default function UbicacionSection() {
   return (
     <section id="ubicacion" className="section-ubicacion">
       <img
-        src="/src/logo-background.png"
+        src="/src/logo-background.webp"
         className="logo-bg-overlay"
         alt=""
         aria-hidden="true"
+        loading="lazy"
+        decoding="async"
       />
       <div className="ubicacion-content">
         <h1 className="ubicacion-title">Ubicación</h1>
@@ -46,7 +48,7 @@ export default function UbicacionSection() {
               Ver en Google Maps
             </a>
           </div>
-          <img src="/src/map.png" alt="Mapa de ubicación" className="ubicacion-map" />
+          <img src="/src/map.webp" alt="Mapa de ubicación de High Point Querétaro en Centro Sur, Santiago de Querétaro" className="ubicacion-map" loading="lazy" decoding="async" />
         </div>
       </div>
     </section>

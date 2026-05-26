@@ -50,7 +50,7 @@ export default function RazonesSection() {
             </p>
           ))}
         </div>
-        <img src="/src/fachada.png" alt="Fachada High Point" className="razones-img" />
+        <img src="/src/fachada.webp" alt="Fachada del edificio High Point Querétaro, departamentos en preventa en Centro Sur" className="razones-img" loading="lazy" decoding="async" />
       </div>
     </section>
   )

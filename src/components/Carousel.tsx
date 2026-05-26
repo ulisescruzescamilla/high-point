@@ -1,11 +1,12 @@
 interface CarouselProps {
   images: string[]
   altPrefix?: string
+  alts?: string[]
   index?: number
   onIndexChange?: (i: number) => void
 }
 
-export default function Carousel({ images, altPrefix = 'Slide', index = 0, onIndexChange }: CarouselProps) {
+export default function Carousel({ images, altPrefix = 'Slide', alts, index = 0, onIndexChange }: CarouselProps) {
   if (images.length === 0) return null
 
   const navigate = (i: number) => onIndexChange?.(i)
@@ -25,8 +26,10 @@ export default function Carousel({ images, altPrefix = 'Slide', index = 0, onInd
             <img
               key={i}
               src={src}
-              alt={`${altPrefix} ${i + 1}`}
+              alt={alts?.[i] ?? `${altPrefix} ${i + 1}`}
               className={`carousel-slide${i === index ? ' carousel-slide--active' : ''}`}
+              loading={i === index ? 'eager' : 'lazy'}
+              decoding="async"
             />
           ))}
         </div>

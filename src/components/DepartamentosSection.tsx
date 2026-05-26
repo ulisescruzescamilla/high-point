@@ -1,14 +1,14 @@
 import { useState } from 'react'
 
 const flatTabs = [
-  { label: '48.50 m²', img: '/src/flats/1.png' },
-  { label: '43.3 m²',  img: '/src/flats/2.png' },
-  { label: '50.9 m²',  img: '/src/flats/3.png' },
-  { label: '65.0 m²',  img: '/src/flats/4.png' },
-  { label: '68.4 m²',  img: '/src/flats/5.png' },
-  { label: '80.4 m²',  img: '/src/flats/6.png' },
-  { label: '84.7 m²',  img: '/src/flats/7.png' },
-  { label: '88.4 m²',  img: '/src/flats/8.png' },
+  { label: '48.50 m²', img: '/src/flats/1.webp' },
+  { label: '43.3 m²',  img: '/src/flats/2.webp' },
+  { label: '50.9 m²',  img: '/src/flats/3.webp' },
+  { label: '65.0 m²',  img: '/src/flats/4.webp' },
+  { label: '68.4 m²',  img: '/src/flats/5.webp' },
+  { label: '80.4 m²',  img: '/src/flats/6.webp' },
+  { label: '84.7 m²',  img: '/src/flats/7.webp' },
+  { label: '88.4 m²',  img: '/src/flats/8.webp' },
 ]
 
 export default function DepartamentosSection() {
@@ -32,8 +32,10 @@ export default function DepartamentosSection() {
       <div className="flat-preview">
         <img
           src={flatTabs[activeIndex].img}
-          alt={`Departamento ${flatTabs[activeIndex].label}`}
+          alt={`Plano de departamento de ${flatTabs[activeIndex].label} en High Point Querétaro`}
           className="flat-image"
+          loading="lazy"
+          decoding="async"
         />
       </div>
     </section>

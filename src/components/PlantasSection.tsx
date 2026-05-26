@@ -2,10 +2,17 @@ import { useState } from 'react'
 import Carousel from './Carousel'
 
 const plantImages = [
-  '/src/plants/Flat1.png',
-  '/src/plants/Flat2.png',
-  '/src/plants/Flat3.png',
-  '/src/plants/Flat4.png',
+  '/src/plants/Flat1.webp',
+  '/src/plants/Flat2.webp',
+  '/src/plants/Flat3.webp',
+  '/src/plants/Flat4.webp',
+]
+
+const plantAlts = [
+  'Planta arquitectónica nivel 1 del edificio High Point Querétaro',
+  'Planta arquitectónica nivel 2 del edificio High Point Querétaro',
+  'Planta arquitectónica nivel 3 del edificio High Point Querétaro',
+  'Planta arquitectónica nivel 4 del edificio High Point Querétaro',
 ]
 
 export default function PlantasSection() {
@@ -16,7 +23,7 @@ export default function PlantasSection() {
       <h1 className="section-title">Plantas</h1>
       <Carousel
         images={plantImages}
-        altPrefix="Planta"
+        alts={plantAlts}
         index={activeIndex}
         onIndexChange={setActiveIndex}
       />

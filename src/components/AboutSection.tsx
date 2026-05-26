@@ -17,7 +17,7 @@ export default function AboutSection() {
         </p>
       </div>
       <div className="about-right">
-        <img src="/src/brand.png" alt="High Point brand" />
+        <img src="/src/brand.webp" alt="Logo de High Point Querétaro — proyecto de OR-B Desarrolladora" loading="lazy" decoding="async" />
       </div>
     </section>
   )
