@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Carousel from './Carousel'
 
 const carouselImages = [
@@ -13,30 +14,62 @@ const carouselImages = [
   '/src/carrousel/salon.png',
 ]
 
-const amenityFrames = Array.from({ length: 12 }, (_, i) => `/src/amenities/Frame%20${i + 1}.svg`)
-const amenityFramesRow2 = Array.from({ length: 5 }, (_, i) => `/src/amenities/Frame%20${i + 13}.svg`)
+const frameToIndex: Record<number, number> = {
+  1: 8,   // pet.png
+  9: 6,   // lobby.png
+  10: 1,  // biblioteca.png
+  11: 7,  // ludoteca.png
+  12: 2,  // family room.png
+  13: 9,  // salon.png
+  14: 5,  // gym.png
+  15: 0,  // alberca.png
+  16: 3,  // firepit.png
+  17: 4,  // foro.png
+}
+
+const row1Frames = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+const row2Frames = [13, 14, 15, 16, 17]
 
 export default function AmenidadesSection() {
+  const [activeIndex, setActiveIndex] = useState(0)
+
+  const handleFrameClick = (frame: number) => {
+    if (frame in frameToIndex) setActiveIndex(frameToIndex[frame])
+  }
+
   return (
     <section id="amenidades" className="section-amenidades">
       <h1 className="section-title">Amenidades</h1>
 
       <div className="amenities-grid">
-        {amenityFrames.map((src, i) => (
-          <div key={i} className="amenity-cell">
-            <img src={src} alt={`Amenidad ${i + 1}`} />
+        {row1Frames.map(frame => (
+          <div
+            key={frame}
+            className={`amenity-cell${frame in frameToIndex ? ' amenity-cell--clickable' : ''}`}
+            onClick={() => handleFrameClick(frame)}
+          >
+            <img src={`/src/amenities/Frame%20${frame}.svg`} alt={`Amenidad ${frame}`} />
           </div>
         ))}
       </div>
       <div className="amenities-grid amenities-grid--row2">
-        {amenityFramesRow2.map((src, i) => (
-          <div key={i} className="amenity-cell">
-            <img src={src} alt={`Amenidad ${i + 13}`} />
+        {row2Frames.map(frame => (
+          <div
+            key={frame}
+            className={`amenity-cell${frame in frameToIndex ? ' amenity-cell--clickable' : ''}`}
+            onClick={() => handleFrameClick(frame)}
+          >
+            <img src={`/src/amenities/Frame%20${frame}.svg`} alt={`Amenidad ${frame}`} />
           </div>
         ))}
       </div>
 
-      <Carousel images={carouselImages} altPrefix="Amenidad" />
+      <Carousel
+        images={carouselImages}
+        altPrefix="Amenidad"
+        index={activeIndex}
+        onIndexChange={setActiveIndex}
+      />
     </section>
   )
 }
