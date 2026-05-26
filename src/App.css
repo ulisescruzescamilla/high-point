@@ -546,6 +546,12 @@
 
   @media (max-width: 768px) {
     padding: 48px 24px;
+
+    & .section-title {
+      font-size: 32px;
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
   }
 }
 
