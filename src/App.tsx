@@ -26,6 +26,15 @@ function App() {
       <UbicacionSection />
       <AboutSection />
       <ContactoSection />
+      <a
+        href="https://wa.me/525525386374"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="whatsapp-float"
+        aria-label="Contactar por WhatsApp"
+      >
+        <img src="/src/whatsapp.svg" alt="WhatsApp" />
+      </a>
       <Footer />
     </div>
   )

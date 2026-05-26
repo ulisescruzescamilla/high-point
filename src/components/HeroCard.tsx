@@ -10,7 +10,11 @@ export default function HeroCard() {
         Querétaro potencializará tu rendimiento, invierte en ti, invierte
         inteligente.
       </p>
-      <button type="button" className="btn-primary">
+      <button
+        type="button"
+        className="btn-primary"
+        onClick={() => window.open('https://wa.me/525525386374', '_blank', 'noopener,noreferrer')}
+      >
         Cotiza Ahora
       </button>
     </div>
