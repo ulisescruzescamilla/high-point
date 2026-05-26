@@ -38,9 +38,9 @@ export default function RazonesSection() {
         alt=""
         aria-hidden="true"
       />
-      <h1 className="razones-title">
+      <h2 className="razones-title">
         Razones para elegir comprar en High Point Querétaro
-      </h1>
+      </h2>
       <div className="razones-grid">
         <div className="razones-list">
           {items.map((item, i) => (

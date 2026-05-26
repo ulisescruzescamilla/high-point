@@ -72,7 +72,7 @@ export default function AmenidadesSection() {
 
   return (
     <section id="amenidades" className="section-amenidades">
-      <h1 className="section-title">Amenidades</h1>
+      <h2 className="section-title">Amenidades</h2>
 
       <div className="amenities-grid">
         {row1Frames.map(frame => (

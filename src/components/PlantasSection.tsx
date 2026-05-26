@@ -20,7 +20,7 @@ export default function PlantasSection() {
 
   return (
     <section id="plantas" className="section-plantas">
-      <h1 className="section-title">Plantas</h1>
+      <h2 className="section-title">Plantas</h2>
       <Carousel
         images={plantImages}
         alts={plantAlts}

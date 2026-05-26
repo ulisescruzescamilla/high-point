@@ -16,7 +16,7 @@ export default function DepartamentosSection() {
 
   return (
     <section id="departamentos" className="section-departamentos">
-      <h1 className="section-title">Departamentos</h1>
+      <h2 className="section-title">Departamentos</h2>
       <div className="tabs">
         {flatTabs.map((flat, i) => (
           <button

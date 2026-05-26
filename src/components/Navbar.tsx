@@ -17,7 +17,7 @@ export default function Navbar() {
 
   return (
     <nav className={`navbar${open ? ' navbar--open' : ''}`}>
-      <img src="/logo.svg" alt="High Point" className="navbar-logo" />
+      <img src="/logo.svg" alt="High Point Querétaro" className="navbar-logo" />
 
       <button
         className="navbar-hamburger"

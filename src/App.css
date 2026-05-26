@@ -158,6 +158,15 @@
   gap: 24px;
   width: 76%;
 
+  & .hero-card__slogan {
+    font-family: var(--font-heading);
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--color-text);
+    margin: 0;
+    letter-spacing: 0.04em;
+  }
+
   & .hero-card__title {
     font-family: var(--font-heading);
     font-size: 48px;
@@ -645,6 +654,7 @@
 
   & .ubicacion-subtitle {
     font-size: 16px;
+    font-style: normal;
     color: #fff;
     margin-bottom: 48px;
   }
@@ -727,7 +737,7 @@
     padding: 80px 48px;
     text-align: left;
 
-    & h1 {
+    & h2 {
       margin-bottom: 24px;
     }
 

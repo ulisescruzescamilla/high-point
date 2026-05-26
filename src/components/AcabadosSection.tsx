@@ -15,7 +15,7 @@ export default function AcabadosSection() {
 
   return (
     <section id="galeria" className="section-acabados">
-      <h1 className="section-title">Acabados</h1>
+      <h2 className="section-title">Acabados</h2>
       <div className="tabs">
         {acabadoTabs.map((tab, i) => (
           <button

@@ -2,7 +2,7 @@ export default function AboutSection() {
   return (
     <section id="about-us" className="section-about">
       <div className="about-left">
-        <h1>¿Quiénes somos?</h1>
+        <h2>¿Quiénes somos?</h2>
         <p>
           Pertenecemos a la destacada familia de
           proyectos de OR-B, una desarrolladora con

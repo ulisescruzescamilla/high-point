@@ -39,7 +39,12 @@ body {
   min-height: 100svh;
 }
 
-h1 {
+h1,
+h2.section-title,
+h2.razones-title,
+h2.ubicacion-title,
+h2.contacto-title,
+.about-left h2 {
   font-family: var(--font-heading);
   font-weight: 400;
   color: var(--color-text);

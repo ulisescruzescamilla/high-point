@@ -28,10 +28,10 @@ export default function UbicacionSection() {
         decoding="async"
       />
       <div className="ubicacion-content">
-        <h1 className="ubicacion-title">Ubicación</h1>
-        <p className="ubicacion-subtitle">
+        <h2 className="ubicacion-title">Ubicación</h2>
+        <address className="ubicacion-subtitle">
           Centro Sur 76090 Santiago de Querétaro, Querétaro
-        </p>
+        </address>
         <div className="ubicacion-grid">
           <div className="ubicacion-list-wrap">
             <ol className="ubicacion-text ubicacion-list">

@@ -5,7 +5,6 @@ export default function HeroCard() {
       <p className="hero-card__content">
         ORB Desarrolladora ha diseñado el único concepto en Querétaro
         "Live, Work and Play", donde puedes hacer toda tu vida en el mismo lugar.
-        <br /><br />
         El tiempo es lo más valioso en el mundo de hoy, vivir en High Point
         Querétaro potencializará tu rendimiento, invierte en ti, invierte
         inteligente.
