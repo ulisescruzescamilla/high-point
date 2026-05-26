@@ -1,41 +1,45 @@
+import { lazy, Suspense } from 'react'
 import './App.css'
 import Navbar from './components/Navbar'
 import HeroSection from './components/HeroSection'
-import RazonesSection from './components/RazonesSection'
-import SectionBreak from './components/SectionBreak'
-import AmenidadesSection from './components/AmenidadesSection'
-import DepartamentosSection from './components/DepartamentosSection'
-import AcabadosSection from './components/AcabadosSection'
-import PlantasSection from './components/PlantasSection'
-import UbicacionSection from './components/UbicacionSection'
-import AboutSection from './components/AboutSection'
-import ContactoSection from './components/ContactoSection'
-import Footer from './components/Footer'
+
+const RazonesSection       = lazy(() => import('./components/RazonesSection'))
+const SectionBreak         = lazy(() => import('./components/SectionBreak'))
+const AmenidadesSection    = lazy(() => import('./components/AmenidadesSection'))
+const DepartamentosSection = lazy(() => import('./components/DepartamentosSection'))
+const AcabadosSection      = lazy(() => import('./components/AcabadosSection'))
+const PlantasSection       = lazy(() => import('./components/PlantasSection'))
+const UbicacionSection     = lazy(() => import('./components/UbicacionSection'))
+const AboutSection         = lazy(() => import('./components/AboutSection'))
+const ContactoSection      = lazy(() => import('./components/ContactoSection'))
+const Footer               = lazy(() => import('./components/Footer'))
 
 function App() {
   return (
     <div className="page">
       <Navbar />
       <HeroSection />
-      <RazonesSection />
-      <SectionBreak />
-      <AmenidadesSection />
-      <DepartamentosSection />
-      <AcabadosSection />
-      <PlantasSection />
-      <UbicacionSection />
-      <AboutSection />
-      <ContactoSection />
-      <a
-        href="https://wa.me/525525386374"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="whatsapp-float"
-        aria-label="Contactar por WhatsApp"
-      >
-        <img src="/src/whatsapp.svg" alt="WhatsApp" />
-      </a>
-      <Footer />
+      <Suspense fallback={null}>
+        <RazonesSection />
+        <SectionBreak />
+        <AmenidadesSection />
+        <DepartamentosSection />
+        <AcabadosSection />
+        <PlantasSection />
+        <UbicacionSection />
+        <AboutSection />
+        <ContactoSection />
+        <a
+          href="https://wa.me/525525386374"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="whatsapp-float"
+          aria-label="Contactar por WhatsApp"
+        >
+          <img src="/src/whatsapp.svg" alt="WhatsApp" width={128} height={128} />
+        </a>
+        <Footer />
+      </Suspense>
     </div>
   )
 }

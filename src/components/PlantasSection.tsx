@@ -24,6 +24,8 @@ export default function PlantasSection() {
       <Carousel
         images={plantImages}
         alts={plantAlts}
+        imageWidth={1600}
+        imageHeight={1038}
         index={activeIndex}
         onIndexChange={setActiveIndex}
       />

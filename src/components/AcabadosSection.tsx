@@ -31,6 +31,8 @@ export default function AcabadosSection() {
       <Carousel
         images={acabadoImages}
         alts={acabadoAlts}
+        imageWidth={854}
+        imageHeight={481}
         index={activeIndex}
         onIndexChange={setActiveIndex}
       />

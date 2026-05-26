@@ -5,7 +5,7 @@ import HeroRooms from './HeroRooms'
 export default function HeroSection() {
   return (
     <section id="proyecto" className="section-hero">
-      <img src={heroImg} alt="" className="hero-bg" aria-hidden="true" fetchPriority="high" decoding="async" />
+      <img src={heroImg} alt="" className="hero-bg" aria-hidden="true" fetchPriority="high" decoding="async" width={1913} height={1078} />
       <div className="hero-col hero-col--left" />
       <div className="hero-col hero-col--right">
         <HeroCard />

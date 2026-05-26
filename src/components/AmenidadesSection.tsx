@@ -81,7 +81,7 @@ export default function AmenidadesSection() {
             className={`amenity-cell${frame in frameToIndex ? ' amenity-cell--clickable' : ''}`}
             onClick={() => handleFrameClick(frame)}
           >
-            <img src={`/src/amenities/Frame%20${frame}.svg`} alt={frameAlts[frame]} loading="lazy" decoding="async" />
+            <img src={`/src/amenities/Frame%20${frame}.svg`} alt={frameAlts[frame]} loading="lazy" decoding="async" width={160} height={160} />
           </div>
         ))}
       </div>
@@ -92,7 +92,7 @@ export default function AmenidadesSection() {
             className={`amenity-cell${frame in frameToIndex ? ' amenity-cell--clickable' : ''}`}
             onClick={() => handleFrameClick(frame)}
           >
-            <img src={`/src/amenities/Frame%20${frame}.svg`} alt={frameAlts[frame]} loading="lazy" decoding="async" />
+            <img src={`/src/amenities/Frame%20${frame}.svg`} alt={frameAlts[frame]} loading="lazy" decoding="async" width={160} height={160} />
           </div>
         ))}
       </div>
@@ -100,6 +100,8 @@ export default function AmenidadesSection() {
       <Carousel
         images={carouselImages}
         alts={carouselAlts}
+        imageWidth={677}
+        imageHeight={480}
         index={activeIndex}
         onIndexChange={setActiveIndex}
       />

@@ -32,7 +32,7 @@ export default function ContactoSection() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="/src/whatsapp.svg" alt="WhatsApp" className="contacto-whatsapp" />
+            <img src="/src/whatsapp.svg" alt="WhatsApp" className="contacto-whatsapp" width={128} height={128} />
           </a>
         </div>
       </div>

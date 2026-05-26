@@ -26,6 +26,8 @@ export default function UbicacionSection() {
         aria-hidden="true"
         loading="lazy"
         decoding="async"
+        width={1600}
+        height={1583}
       />
       <div className="ubicacion-content">
         <h2 className="ubicacion-title">Ubicación</h2>
@@ -48,7 +50,7 @@ export default function UbicacionSection() {
               Ver en Google Maps
             </a>
           </div>
-          <img src="/src/map.webp" alt="Mapa de ubicación de High Point Querétaro en Centro Sur, Santiago de Querétaro" className="ubicacion-map" loading="lazy" decoding="async" />
+          <img src="/src/map.webp" alt="Mapa de ubicación de High Point Querétaro en Centro Sur, Santiago de Querétaro" className="ubicacion-map" loading="lazy" decoding="async" width={827} height={724} />
         </div>
       </div>
     </section>

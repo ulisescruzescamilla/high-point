@@ -37,6 +37,8 @@ export default function RazonesSection() {
         className="green-rect"
         alt=""
         aria-hidden="true"
+        width={360}
+        height={886}
       />
       <h2 className="razones-title">
         Razones para elegir comprar en High Point Querétaro
@@ -50,7 +52,7 @@ export default function RazonesSection() {
             </p>
           ))}
         </div>
-        <img src="/src/fachada.webp" alt="Fachada del edificio High Point Querétaro, departamentos en preventa en Centro Sur" className="razones-img" loading="lazy" decoding="async" />
+        <img src="/src/fachada.webp" alt="Fachada del edificio High Point Querétaro, departamentos en preventa en Centro Sur" className="razones-img" loading="lazy" decoding="async" width={550} height={521} />
       </div>
     </section>
   )

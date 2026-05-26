@@ -2,11 +2,13 @@ interface CarouselProps {
   images: string[]
   altPrefix?: string
   alts?: string[]
+  imageWidth?: number
+  imageHeight?: number
   index?: number
   onIndexChange?: (i: number) => void
 }
 
-export default function Carousel({ images, altPrefix = 'Slide', alts, index = 0, onIndexChange }: CarouselProps) {
+export default function Carousel({ images, altPrefix = 'Slide', alts, imageWidth, imageHeight, index = 0, onIndexChange }: CarouselProps) {
   if (images.length === 0) return null
 
   const navigate = (i: number) => onIndexChange?.(i)
@@ -30,6 +32,8 @@ export default function Carousel({ images, altPrefix = 'Slide', alts, index = 0,
               className={`carousel-slide${i === index ? ' carousel-slide--active' : ''}`}
               loading={i === index ? 'eager' : 'lazy'}
               decoding="async"
+              width={imageWidth}
+              height={imageHeight}
             />
           ))}
         </div>

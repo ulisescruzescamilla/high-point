@@ -1,73 +1,46 @@
-# React + TypeScript + Vite
+# High Point Querétaro — Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descripción
 
-Currently, two official plugins are available:
+Landing page promocional para **High Point Querétaro**, un desarrollo de departamentos en preventa ubicado en Centro Sur, Santiago de Querétaro (CP 76090). El proyecto es desarrollado por OR-B Desarrolladora bajo el concepto *Live, Work & Play*.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Propósito:** Prueba técnica de Mappen
 
-## React Compiler
+**Stack:** React 19 + TypeScript + Vite. SPA de una sola página sin ruteo ni backend. Imágenes en formato WebP optimizadas para carga rápida y SEO.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Cómo desplegar
 
-## Expanding the ESLint configuration
+### Requisitos previos
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Node.js 18 o superior
+- npm 9 o superior
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Pasos
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+```bash
+# 1. Clonar el repositorio
+git clone https://github.com/tu-usuario/landing-high-point.git
+cd landing-high-point
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# 2. Instalar dependencias
+npm install
+
+# 3. Iniciar el servidor de desarrollo con HMR
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+El sitio estará disponible en `http://localhost:5173`.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Otros comandos
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run build    # Compila TypeScript y genera el bundle de producción en /dist
+npm run preview  # Sirve el build de producción localmente para revisión
+npm run lint     # Ejecuta ESLint sobre todo el proyecto
 ```
+
+### Comentarios
+
+#### Posibles mejoras:
+- Agregar env vars para datos que podemos modificar al desplegar como datos de contacto, teléfono, email, url del sitio.
+- En la sección de plantas los recursos exportados del figma parece que el estilo background blanco no es visualmente adecuado a la agrupación del figma actual, se podría cambiar background o agrupación del figma para mejorar como visualizar en carrousel.
